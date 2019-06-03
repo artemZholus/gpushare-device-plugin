@@ -3,14 +3,14 @@ package main
 import (
 	"flag"
 
-	"github.com/AliyunContainerService/gpushare-device-plugin/pkg/gpu/nvidia"
+	"github.com/artemZholus/gpushare-device-plugin/pkg/gpu/nvidia"
 	log "github.com/golang/glog"
 )
 
 var (
 	mps         = flag.Bool("mps", false, "Enable or Disable MPS")
 	healthCheck = flag.Bool("health-check", false, "Enable or disable Health check")
-	memoryUnit  = flag.String("memory-unit", "GiB", "Set memoryUnit of the GPU Memroy, support 'GiB' and 'MiB'")
+	memoryUnit  = flag.String("memory-unit", "MiB", "Set memoryUnit of the GPU Memroy, support 'GiB' and 'MiB'")
 )
 
 func main() {
